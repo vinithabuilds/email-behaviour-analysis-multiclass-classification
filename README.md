@@ -214,7 +214,7 @@ mysql+pymysql://username:password@localhost/email_analysis
 
 Run the database integration section to upload the processed dataset into MySQL.
 
-5. Run the GUI Application
+### 5. Run the GUI Application
 
 python email_tk.py
 
