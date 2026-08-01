@@ -221,13 +221,11 @@ python email_tk.py
 The desktop application will launch and allow users to classify email messages.
 
 ---
-
 ## Project Status
 
 Completed
 
 ---
-
 ## Future Enhancements
 
 - Convert the desktop application into a web application
@@ -237,7 +235,6 @@ Completed
 - Deploy the application on cloud platforms
 
 ---
-
 ## Author
 
 **M. Vinitha** 
