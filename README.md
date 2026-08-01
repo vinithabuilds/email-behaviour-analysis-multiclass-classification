@@ -1,91 +1,234 @@
 # Email Behaviour Analysis and Multi-Class Email Classification System
 
-A machine learning-based desktop application that classifies email messages into **Spam**, **Ham**, and **Phish** using behavioural feature engineering, TF-IDF vectorization, and a Multinomial Naive Bayes classifier. The application provides real-time predictions with confidence scores through an interactive Tkinter GUI and includes MySQL integration and Power BI visualization.
+A machine learning-based desktop application that classifies email messages into **Spam**, **Ham**, and **Phish** using Natural Language Processing (NLP), behavioural feature engineering, TF-IDF vectorization, and a Multinomial Naive Bayes classifier.
+
+The system provides real-time email classification with confidence scores through an interactive Tkinter GUI and includes MySQL integration for processed data analysis and Power BI visualization.
 
 ---
 
 ## Project Overview
 
-This project combines Natural Language Processing (NLP), Machine Learning, and behavioural feature engineering to improve email classification beyond traditional keyword-based filtering. It analyzes both textual and behavioural characteristics of email messages to accurately classify them as **Spam**, **Ham**, or **Phish**.
+Email-based threats such as spam and phishing continue to be a major cybersecurity concern. Traditional keyword-based filtering methods may fail to capture complex patterns in email content.
+
+This project develops a **Multi-Class Email Classification System** that analyzes both textual information and behavioural characteristics of emails to classify them into:
+
+- **Spam** – Unwanted or malicious promotional emails
+- **Ham** – Legitimate emails
+- **Phish** – Phishing-related suspicious emails
+
+The project combines Natural Language Processing, Machine Learning, feature engineering, database integration, and desktop application development into a complete end-to-end system.
 
 ---
 
-## Features
+## Key Features
 
 - Multi-class email classification (Spam, Ham, and Phish)
-- Behavioural feature engineering
-- TF-IDF character n-gram vectorization
-- Machine learning using Multinomial Naive Bayes
-- Predicts the email category with confidence score
-- Interactive Tkinter desktop application (GUI)
-- Model evaluation using a Classification Report and Confusion Matrix
-- Confusion Matrix visualized as a heatmap
-- MySQL database integration
-- Power BI dashboard for data visualization
+- Behavioural feature extraction from email content
+- TF-IDF character n-gram based text feature extraction
+- Multinomial Naive Bayes classification model
+- Confidence score generation for predictions
+- Tkinter-based interactive desktop GUI application
+- Model evaluation using classification report and confusion matrix
+- MySQL database integration for storing and querying processed data
+- Power BI dashboard for visualization and analysis
+
+---
+
+## Behavioural Features Extracted
+
+Along with textual features, the system extracts behavioural patterns from emails:
+
+- Character length
+- Word count
+- Sentence count
+- Suspicious phrase count
+- URL count
+- Digit count
+- Uppercase character count
+- Special character count
+- Spam score
+- Phishing score
+
+These behavioural features are combined with TF-IDF features to improve classification performance.
+
+---
+
+## Dataset Details
+
+The dataset contains **6,299 email records** belonging to three categories:
+
+| Category | Records |
+|----------|---------|
+| Ham | 4,828 |
+| Spam | 765 |
+| Phish | 706 |
 
 ---
 
 ## Technologies Used
 
+### Programming Language
 - Python
-- Tkinter
+
+### Machine Learning & Data Processing
 - Pandas
 - NumPy
 - Scikit-learn
 - SciPy
+
+### NLP & Feature Engineering
+- TF-IDF Vectorization
+- Regular Expressions (`re`)
+- Character n-gram analysis
+
+### Visualization
 - Matplotlib
 - Seaborn
+- Power BI
+
+### Database
+- MySQL
 - SQLAlchemy
 - PyMySQL
-- MySQL
-- Power BI
+
+### Application Development
+- Tkinter
+
+### Model Persistence
 - Pickle
-- Regular Expressions (`re`)
 
 ---
 
 ## Machine Learning Workflow
 
-1. Data preprocessing
-2. Text cleaning using Regular Expressions (`re`)
-3. Behavioural feature engineering
-4. TF-IDF character n-gram feature extraction
-5. Feature scaling using MinMaxScaler
-6. Model training using Multinomial Naive Bayes
-7. Model evaluation
-8. Model persistence using Pickle
-9. Email prediction with confidence score
-10. Desktop GUI deployment using Tkinter
+1. Dataset loading and exploration
+2. Data preprocessing and cleaning
+3. Text cleaning using Regular Expressions
+4. Behavioural feature extraction
+5. TF-IDF character n-gram feature extraction
+6. Behavioural feature scaling using MinMaxScaler
+7. Combining text and behavioural features
+8. Training using Multinomial Naive Bayes classifier
+9. Model evaluation
+10. Saving trained model components using Pickle
+11. Loading saved models for prediction
+12. Deploying prediction functionality through Tkinter GUI
 
 ---
 
 ## Model Performance
 
-- **Test Accuracy:** **97.2%**
-- Evaluated using a Classification Report
-- Confusion Matrix visualization using a heatmap
-- Confidence score displayed for every prediction
+The trained model achieved:
+
+**Test Accuracy: 97.2%**
+
+### Evaluation Methods:
+
+- Classification Report
+  - Precision
+  - Recall
+  - F1-score
+
+- Confusion Matrix
+  - Visualized using a heatmap
+  - Used to analyze prediction performance across Spam, Ham, and Phish categories
+
+---
+
+## MySQL Database Integration
+
+The project integrates MySQL to store and analyze the processed email dataset.
+
+### Database Workflow:
+
+1. The original dataset (`spam mail.csv`) is loaded and processed using Python.
+2. Data cleaning and behavioural feature extraction are performed.
+3. The processed dataset is connected to MySQL using:
+   - SQLAlchemy
+   - PyMySQL
+4. The cleaned data is stored in a MySQL database table.
+5. SQL queries are used for data analysis and extracting insights.
+6. The data is visualized using Power BI dashboards.
+
+---
+
+## Tkinter Desktop Application
+
+The project includes a GUI application developed using Tkinter.
+
+Users can:
+
+- Enter email content
+- Click the prediction button
+- View the predicted category
+- View the confidence score
+- Clear input and perform new predictions
+
+### Application Preview
+
+![Email Classifier GUI](email_classifier_gui.png)
 
 ---
 
 ## Project Structure
 
-- Dataset preprocessing
-- Feature engineering
-- Machine learning model training
-- Trained model files (`.pkl`)
-- Tkinter desktop application
-- MySQL database integration
-- Power BI dashboard
+Email-Behaviour-Analysis/ │ ├── Email_Behaviour_Analysis.ipynb ├── email_tk.py ├── spam mail.csv ├── spam_model_v3.pkl ├── tfidf_vectorizer_v3.pkl ├── scaler_v3.pkl ├── requirements.txt ├── email_classifier_gui.png └── README.md
+
+
+---
+
+## How to Run the Project
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd Email-Behaviour-Analysis
+
+2. Install Dependencies
+
+pip install -r requirements.txt
+
+3. Run the Jupyter Notebook
+
+jupyter notebook Email_Behaviour_Analysis.ipynb
+
+The notebook contains:
+Dataset analysis
+Data preprocessing
+Feature engineering
+Model training
+Model evaluation
+Saving trained model files
+
+4. Configure MySQL Database
+
+Install and start MySQL Server.
+Create a database:
+
+CREATE DATABASE email_analysis;
+
+Update the MySQL connection details in the notebook:
+
+mysql+pymysql://username:password@localhost/email_analysis
+
+Run the database integration section to upload the processed dataset into MySQL.
+
+5. Run the GUI Application
+
+python email_tk.py
+
+The desktop application will launch and allow users to classify email messages.
 
 ---
 
 ## Future Enhancements
 
-- Deploy the application as a web application using FastAPI
-- Integrate real-time email analysis
+- Convert the desktop application into a web application
+- Develop API-based prediction services using FastAPI
+- Integrate real-time email analysis capabilities
 - Experiment with advanced machine learning and deep learning models
-- Deploy the application to the cloud
+- Deploy the application on cloud platforms
 
 ---
 
