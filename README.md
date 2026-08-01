@@ -218,7 +218,7 @@ Run the database integration section to upload the processed dataset into MySQL.
 
 ```bash
 python email_tk.py
-
+```
 The desktop application will launch and allow users to classify email messages.
 
 ---
@@ -241,5 +241,6 @@ Completed
 
 ## Author
 
-**M. Vinitha** 
+**M. Vinitha**
+
 GitHub: @vinithabuilds
