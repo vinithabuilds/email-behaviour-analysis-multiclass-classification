@@ -185,12 +185,12 @@ Email-Behaviour-Analysis/ │ ├── Email_Behaviour_Analysis.ipynb ├──
 git clone <repository-url>
 cd Email-Behaviour-Analysis
 ```
-2. Install Dependencies
+### 2. Install Dependencies
 
 ```
 pip install -r requirements.txt
 ```
-3. Run the Jupyter Notebook
+### 3. Run the Jupyter Notebook
    
 ```
 jupyter notebook Email_Behaviour_Analysis.ipynb
@@ -203,7 +203,7 @@ Model training
 Model evaluation
 Saving trained model files
 
-4. Configure MySQL Database
+### 4. Configure MySQL Database
 
 Install and start MySQL Server.
 Create a database:
