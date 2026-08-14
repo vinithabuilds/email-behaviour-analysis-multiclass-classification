@@ -4,8 +4,6 @@ A machine learning-based desktop application that classifies email messages into
 
 The system provides real-time email classification with confidence scores through an interactive Tkinter GUI and includes MySQL integration for processed data analysis and Power BI visualization.
 
----
-
 ## Project Overview
 
 Email-based threats such as spam and phishing continue to be a major cybersecurity concern. Traditional keyword-based filtering methods may fail to capture complex patterns in email content.
@@ -18,8 +16,6 @@ This project develops a **Multi-Class Email Classification System** that analyze
 
 The project combines Natural Language Processing, Machine Learning, feature engineering, database integration, and desktop application development into a complete end-to-end system.
 
----
-
 ## Key Features
 
 - Multi-class email classification (Spam, Ham, and Phish)
@@ -31,8 +27,6 @@ The project combines Natural Language Processing, Machine Learning, feature engi
 - Model evaluation using classification report and confusion matrix
 - MySQL database integration for storing and querying processed data
 - Power BI dashboard for visualization and analysis
-
----
 
 ## Behavioural Features Extracted
 
@@ -51,8 +45,6 @@ Along with textual features, the system extracts behavioural patterns from email
 
 These behavioural features are combined with TF-IDF features to improve classification performance.
 
----
-
 ## Dataset Details
 
 The dataset contains **6,299 email records** belonging to three categories:
@@ -62,8 +54,6 @@ The dataset contains **6,299 email records** belonging to three categories:
 | Ham | 4,828 |
 | Spam | 765 |
 | Phish | 706 |
-
----
 
 ## Technologies Used
 
@@ -97,8 +87,6 @@ The dataset contains **6,299 email records** belonging to three categories:
 ### Model Persistence
 - Pickle
 
----
-
 ## Machine Learning Workflow
 
 1. Dataset loading and exploration
@@ -113,8 +101,6 @@ The dataset contains **6,299 email records** belonging to three categories:
 10. Saving trained model components using Pickle
 11. Loading saved models for prediction
 12. Deploying prediction functionality through Tkinter GUI
-
----
 
 ## Model Performance
 
@@ -133,8 +119,6 @@ The trained model achieved:
   - Visualized using a heatmap
   - Used to analyze prediction performance across Spam, Ham, and Phish categories
 
----
-
 ## MySQL Database Integration
 
 The project integrates MySQL to store and analyze the processed email dataset.
@@ -149,8 +133,6 @@ The project integrates MySQL to store and analyze the processed email dataset.
 4. The cleaned data is stored in a MySQL database table.
 5. SQL queries are used for data analysis and extracting insights.
 6. The data is visualized using Power BI dashboards.
-
----
 
 ## Tkinter Desktop Application
 
@@ -168,14 +150,10 @@ Users can:
 
 ![Email Classifier GUI](email_classifier_gui.png)
 
----
-
 ## Project Structure
 
 Email-Behaviour-Analysis/ │ ├── Email_Behaviour_Analysis.ipynb ├── email_tk.py ├── spam mail.csv ├── spam_model_v3.pkl ├── tfidf_vectorizer_v3.pkl ├── scaler_v3.pkl ├── requirements.txt ├── email_classifier_gui.png └── README.md
 
-
----
 
 ## How to Run the Project
 
@@ -224,13 +202,9 @@ python email_tk.py
 ```
 The desktop application will launch and allow users to classify email messages.
 
----
-
 ## Project Status
 
 Completed
-
----
 
 ## Future Enhancements
 
@@ -247,3 +221,5 @@ Completed
 **M. Vinitha**
 
 GitHub: @vinithabuilds
+
+⭐ If you find this project useful, consider giving the repository a star!
